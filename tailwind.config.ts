@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        typewriter: "typewriter 2s steps(11) forwards",
+      },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%",
+          },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

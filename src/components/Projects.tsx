@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -15,11 +15,11 @@ const Projects = () => {
         "A platform where users can create an account, share their thoughts by posting blogs, and explore content written by others. Users can view a blog when clicking on one.",
       link: "https://github.com/weasy1as/Blog-World",
       techStack: [
-        <SiNextdotjs />,
-        <SiTailwindcss />,
-        <SiPrisma />,
-        <SiPostgresql />,
-        <FaGithub />,
+        { icon: <SiNextdotjs />, name: "Next.js" },
+        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+        { icon: <SiPrisma />, name: "Prisma" },
+        { icon: <SiPostgresql />, name: "PostgreSQL" },
+        { icon: <FaGithub />, name: "GitHub" },
       ],
     },
     {
@@ -28,11 +28,11 @@ const Projects = () => {
         "A web application designed to help users manage their job applications efficiently. Users can log in, keep track of their applications, and monitor their progress all in one dashboard.",
       link: "https://github.com/weasy1as/JobTracker",
       techStack: [
-        <SiNextdotjs />,
-        <SiTailwindcss />,
-        <SiPrisma />,
-        <SiPostgresql />,
-        <FaGithub />,
+        { icon: <SiNextdotjs />, name: "Next.js" },
+        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+        { icon: <SiPrisma />, name: "Prisma" },
+        { icon: <SiPostgresql />, name: "PostgreSQL" },
+        { icon: <FaGithub />, name: "GitHub" },
       ],
     },
   ];
@@ -57,13 +57,13 @@ const Projects = () => {
                 {project.description}
               </p>
             </a>
-            {/* Tech Stack */}
+
             <div className="flex gap-4 items-center">
               <span className="font-semibold">Tech Used:</span>
               <div className="flex gap-2 text-accent">
-                {project.techStack.map((icon, iconIndex) => (
-                  <span key={iconIndex} className="text-2xl">
-                    {icon}
+                {project.techStack.map((tech, techIndex) => (
+                  <span key={techIndex} className="text-2xl">
+                    {tech.icon}
                   </span>
                 ))}
               </div>

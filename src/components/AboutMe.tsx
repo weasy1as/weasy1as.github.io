@@ -1,24 +1,39 @@
 import React from "react";
+import { FaUniversity } from "react-icons/fa";
 
 const AboutMe = () => {
   return (
     <div className="flex flex-col gap-8 justify-center items-center mb-12 ">
-      <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold mb-12">
+      <h1
+        id="about"
+        className="text-4xl md:text-5xl text-center md:text-start font-bold mb-12"
+      >
         About Me
       </h1>
+
+      <div className="flex flex-col  gap-6 p-6 m-6 border-l-4 border-accent bg-white shadow-md rounded-lg hover:shadow-lg hover:scale-[1.05] transition-transform duration-300 ease-in-out">
+        <FaUniversity className="w-full flex justify-center" size={40} />
+        <h2 className="text-xl font-bold text-primary italic">
+          Education: Software Technology
+        </h2>
+        <div className="flex gap-3 italic">
+          <p className="text-lg font-semibold">Title:</p>
+          <p className="text-lg text-secondaryAccent">
+            Bachelor of Engineering
+          </p>
+        </div>
+      </div>
+
       <p className="text-secondaryaccent text-md md:text-lg md:max-w-3xl mx-auto px-6 ">
-        A few years ago, I had no idea that programming would become such a big
-        part of my life. I stumbled across it by chance, and once I started, I
-        couldn’t stop. What began as a curious exploration soon turned into a
-        deep passion for technology and software development. Though I’m still
-        early in my journey, every project I work on excites me. The process of
-        turning an idea into something real that people can use is incredibly
-        rewarding. It’s amazing to see something I’ve built come to life and
-        knowing it could have an impact on others. I’m constantly learning and
-        growing, and while there’s still so much more to discover, the thrill of
-        developing new things keeps me motivated. My goal is to continue
-        building, improving my skills, and creating solutions that make a
-        difference.
+        I am a newly graduated software engineer, eager to step into the
+        professional world and make a meaningful contribution to the tech
+        industry. I have a passion for technology and development, and I’m
+        always ready to learn and grow. While I’m at the beginning of my
+        journey, I’m committed to expanding my skills and becoming the best
+        software engineer I can be. I thrive in collaborative environments and
+        create innovative solutions, and build applications that make a
+        difference. I’m excited about the road ahead and am fully prepared to
+        dedicate myself to becoming a well-rounded and impactful developer.
       </p>
     </div>
   );

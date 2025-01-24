@@ -39,7 +39,10 @@ const Projects = () => {
 
   return (
     <div className="w-full flex flex-col items-center py-16 bg-background text-text px-6">
-      <h1 className="font-bold text-4xl md:text-5xl mb-12 text-center">
+      <h1
+        id="projects"
+        className="font-bold text-4xl md:text-5xl mb-12 text-center"
+      >
         Personal Projects
       </h1>
 
@@ -49,14 +52,12 @@ const Projects = () => {
             key={index}
             className="flex flex-col gap-4 p-6 border-l-4 border-accent bg-white shadow-lg rounded-lg hover:shadow-xl hover:scale-[1.03] transition-transform transform duration-200"
           >
-            <a href={project.link}>
-              <h2 className="text-2xl font-semibold text-accent">
-                {project.name}
-              </h2>
-              <p className="text-lg text-secondaryAccent">
-                {project.description}
-              </p>
-            </a>
+            <h2 className="text-2xl font-semibold text-accent">
+              {project.name}
+            </h2>
+            <p className="text-lg text-secondaryAccent">
+              {project.description}
+            </p>
 
             <div className="flex gap-4 items-center">
               <span className="font-semibold">Tech Used:</span>
@@ -68,6 +69,12 @@ const Projects = () => {
                 ))}
               </div>
             </div>
+            <a
+              href={project.link}
+              className="flex justify-center items-center bg-[rgb(108,117,125)] w-auto h-[40px] gap-4 p-6 border-l-4 text-white font-semibold hover:text-black border-accent bg-secondaryaccent shadow-lg rounded-lg "
+            >
+              Github Link
+            </a>
           </div>
         ))}
       </div>

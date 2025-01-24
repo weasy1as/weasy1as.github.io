@@ -19,13 +19,11 @@ const Skills = () => {
     },
     {
       name: "Next.js",
-      icon: (
-        <RiNextjsFill size={80} className="text-gray-800 dark:text-white" />
-      ),
+      icon: <RiNextjsFill size={80} className="text-gray-800" />,
     },
     {
       name: "GitHub",
-      icon: <FaGithub size={80} className="text-gray-800 dark:text-white" />,
+      icon: <FaGithub size={80} className="text-gray-800 " />,
     },
     {
       name: "MongoDB",

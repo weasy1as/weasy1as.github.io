@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#6c757d] w-full h-[80px] flex justify-end items-center gap-8 pr-16">
+    <div className="bg-[#6c757d] w-full h-[80px] flex justify-center md:justify-end items-center gap-8 md:pr-16">
       <a
         href="/CV.pdf"
         download="Hassan_Abdulahi_CV"

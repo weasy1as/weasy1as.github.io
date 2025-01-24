@@ -13,7 +13,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-16 bg-background text-text px-6 mb-4">
+    <div className="w-full flex flex-col items-center py-16 bg-background text-text  mb-4">
       <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold mb-12">
         Work Experience
       </h1>

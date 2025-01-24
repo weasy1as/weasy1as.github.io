@@ -37,9 +37,9 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-4 mb-4 ">
+    <div className="w-full flex flex-col justify-center items-center gap-4 mb-12 ">
       <h1 className="font-bold text-5xl">Skills</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 pt-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 pt-12 gap-8">
         {skills.map((skill, index) => (
           <div
             key={index}

@@ -13,9 +13,11 @@ const Experience = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-16 bg-background text-text px-4">
-      <h1 className="text-5xl font-bold mb-8">Work Experience</h1>
-      <div className="w-full max-w-3xl flex flex-col gap-8">
+    <div className="w-full flex flex-col items-center py-16 bg-background text-text px-6 mb-4">
+      <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold mb-12">
+        Work Experience
+      </h1>
+      <div className="w-full max-w-3xl flex flex-col gap-8 px-6">
         {experiences.map((exp, index) => (
           <div
             key={index}
@@ -38,7 +40,7 @@ const Experience = () => {
             </p>
             <div>
               <p className="font-bold">Description</p>
-              <p>{exp.Description}</p>
+              <p className="text-secondaryAccent">{exp.Description}</p>
             </div>
           </div>
         ))}

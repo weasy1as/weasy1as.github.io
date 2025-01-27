@@ -12,7 +12,7 @@ const Navbar = () => {
 
   if (hide) {
     return (
-      <div className="bg-[#6c757d] w-full h-[80px] flex justify-center sm:justify-end md:justify-end items-center gap-8 pr-10 sm:pr-16">
+      <div className="bg-[#6c757d] w-full h-[80px] flex justify-center sm:justify-end md:justify-end items-center gap-8  sm:pr-16">
         <ul className="">
           <li>
             <Link

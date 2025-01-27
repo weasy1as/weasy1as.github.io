@@ -1,7 +1,15 @@
+"use client";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const path = usePathname();
+  const hide = path === "/certificates";
+
+  if (hide) {
+    return null;
+  }
   return (
     <div className="bg-[rgb(108,117,125)] w-full flex flex-col justify-center items-center p-6">
       <h1 className="text-3xl md:text-4xl text-white xl:text-5xl text-center md:text-start font-bold mb-12">

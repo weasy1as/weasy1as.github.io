@@ -10,6 +10,14 @@ const Experience = () => {
       Description:
         "During my internship, I contributed to the startup by developing their landing page, helping potential customers to explore their company. I also assisted in building their web-based gaming platform. Throughout the internship, I worked in an agile environment where Scrum practices were followed.",
     },
+    {
+      company: "Nybilspris",
+      position: "Intern",
+      duration: "1 Month",
+      techStack: "Next.js, NextAuth, Prisma",
+      Description:
+        "I was tasked with developing a program to manage the company's data using CRUD operations, which I implemented in Next.js. I also setup authentication with the help of NextAuth google provider",
+    },
   ];
 
   return (

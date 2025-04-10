@@ -7,6 +7,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { DiPostgresql } from "react-icons/di";
+import { FaJava } from "react-icons/fa";
 
 const Skills = () => {
   const skills = [
@@ -32,6 +33,10 @@ const Skills = () => {
     {
       name: "PostgreSQL",
       icon: <DiPostgresql size={80} className="text-blue-500" />,
+    },
+    {
+      name: "Java",
+      icon: <FaJava size={80} className="text-[#007396]" />,
     },
   ];
   return (

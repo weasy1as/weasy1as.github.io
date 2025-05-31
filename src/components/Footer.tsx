@@ -11,10 +11,7 @@ const Footer = () => {
     return null;
   }
   return (
-    <div className="bg-[rgb(108,117,125)] w-full flex flex-col justify-center items-center p-6">
-      <h1 className="text-3xl md:text-4xl text-white xl:text-5xl text-center md:text-start font-bold mb-12">
-        Feel free to contact me at
-      </h1>
+    <div className="w-full flex flex-col justify-center items-center p-6">
       <div className="gap-8">
         <div className="flex justify-center gap-8">
           <div>

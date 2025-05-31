@@ -4,10 +4,13 @@ import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col justify-center items-center border-2 border-black p-6 w-auto">
+    <div className="flex flex-col justify-center items-center  p-6">
       <div className="flex flex-col justify-center items-center">
         <h2 className="font-sans text-gray-500">Get in touch</h2>
-        <h1 className="text-3xl md:text-4xl text-black xl:text-5xl text-center md:text-start font-bold mb-12">
+        <h1
+          id="contact"
+          className="text-3xl md:text-4xl text-black xl:text-5xl text-center md:text-start font-sans font-semibold mb-12"
+        >
           Contact me
         </h1>
       </div>

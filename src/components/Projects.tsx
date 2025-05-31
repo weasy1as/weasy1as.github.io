@@ -12,7 +12,7 @@ const Projects = () => {
     {
       name: "Blog-World",
       description:
-        "A platform where users can create an account, share their thoughts by posting blogs, and explore content written by others. Users can view a blog when clicking on one.",
+        "A platform where users can create an account, post blogs, and explore others' content. Each blog is viewable on click.",
       link: "https://github.com/weasy1as/Blog-World",
       techStack: [
         { icon: <SiNextdotjs />, name: "Next.js" },
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       name: "Job-tracker",
       description:
-        "A web application designed to help users manage their job applications efficiently. Users can log in, keep track of their applications, and monitor their progress all in one dashboard.",
+        "A web app to manage job applications. Track your progress, log new applications, and view all in one dashboard.",
       link: "https://github.com/weasy1as/JobTracker",
       techStack: [
         { icon: <SiNextdotjs />, name: "Next.js" },
@@ -38,47 +38,53 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-16 bg-background text-text px-6">
-      <h1
-        id="projects"
-        className="font-bold text-4xl md:text-5xl mb-12 text-center"
-      >
-        Personal Projects
-      </h1>
-
-      <div className="flex flex-col gap-10 w-full max-w-4xl">
-        {myProjects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-4 p-6 border-l-4 border-accent bg-white shadow-lg rounded-lg hover:shadow-xl hover:scale-[1.03] transition-transform transform duration-200"
-          >
-            <h2 className="text-2xl font-semibold text-accent">
-              {project.name}
-            </h2>
-            <p className="text-lg text-secondaryAccent">
-              {project.description}
-            </p>
-
-            <div className="flex gap-4 items-center">
-              <span className="font-semibold">Tech Used:</span>
-              <div className="flex gap-2 text-accent">
+    <section className="w-full bg-background py-16 px-4 md:px-0 text-text">
+      <div className="max-w-4xl mx-auto">
+        <h1
+          id="projects"
+          className="text-3xl md:text-4xl font-semibold mb-10 text-center md:text-left"
+        >
+          Personal Projects
+        </h1>
+        <div className="space-y-6">
+          {myProjects.map((project, index) => (
+            <div
+              key={index}
+              className="rounded-2xl border border-border bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <h2 className="text-xl font-semibold text-accent">
+                  {project.name}
+                </h2>
+              </div>
+              <p className="text-md md:text-xl text-secondaryAccent mt-2 leading-relaxed">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-3 mt-4 text-accent text-xl">
                 {project.techStack.map((tech, techIndex) => (
-                  <span key={techIndex} className="text-2xl">
+                  <div
+                    key={techIndex}
+                    className="flex items-center justify-center p-2 rounded-md bg-accent/10"
+                    title={tech.name}
+                  >
                     {tech.icon}
-                  </span>
+                  </div>
                 ))}
               </div>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-900 inline-flex items-center gap-2 mt-6 text-xl font-medium text-white bg-secondaryaccent hover:bg-accent px-4 py-2 rounded-lg transition-colors"
+              >
+                <FaGithub />
+                View on GitHub
+              </a>
             </div>
-            <a
-              href={project.link}
-              className="flex justify-center items-center bg-[rgb(108,117,125)] w-auto h-[40px] gap-4 p-6 border-l-4 text-white font-semibold hover:text-black border-accent bg-secondaryaccent shadow-lg rounded-lg "
-            >
-              Github Link
-            </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

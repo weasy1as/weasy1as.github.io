@@ -11,20 +11,23 @@ const AboutMe = () => {
         About Me
       </h1>
 
-      <div className="flex flex-col  gap-6 p-6 m-6 border-l-4 border-accent bg-white shadow-md rounded-lg hover:shadow-lg hover:scale-[1.05] transition-transform duration-300 ease-in-out">
-        <FaUniversity className="w-full flex justify-center" size={40} />
-        <h2 className="text-xl font-bold text-primary italic">
-          Education: Software Technology
-        </h2>
-        <div className="flex gap-3 italic">
-          <p className="text-lg font-semibold">Title:</p>
-          <p className="text-lg text-secondaryAccent">
-            Bachelor of Engineering
-          </p>
+      <div className=" bg-white border border-border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow text-left">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="text-accent text-3xl">
+            <FaUniversity />
+          </div>
+          <div>
+            <h2 className="text-lg font-semibold text-primary">
+              Education: Software Technology
+            </h2>
+            <p className="text-sm text-secondaryAccent italic">
+              Title: Bachelor of Engineering
+            </p>
+          </div>
         </div>
       </div>
 
-      <p className="text-secondaryaccent text-md md:text-lg md:max-w-3xl mx-auto px-6 ">
+      <p className="text-secondaryaccent text-center text-md md:text-2xl md:max-w-3xl mx-auto px-6 ">
         I am a newly graduated software engineer, eager to step into the
         professional world and make a meaningful contribution to the tech
         industry. I have a passion for technology and development, and I’m

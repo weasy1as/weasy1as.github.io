@@ -6,54 +6,60 @@ const Experience = () => {
       company: "Rotoy",
       position: "Intern",
       duration: "6 Months",
-      techStack: "Next.js, Prisma, SQL",
-      Description:
-        "During my internship, I contributed to the startup by developing their landing page, helping potential customers to explore their company. I also assisted in building their web-based gaming platform. Throughout the internship, I worked in an agile environment where Scrum practices were followed.",
+      techStack: ["Next.js", "Prisma", "SQL"],
+      description:
+        "Contributed to the startup by developing their landing page and assisting in building a web-based gaming platform. Worked in an agile team using Scrum practices.",
     },
     {
       company: "Nybilspris",
       position: "Intern",
       duration: "1 Month",
-      techStack: "Next.js, NextAuth, Prisma",
-      Description:
-        "I was tasked with developing a program to manage the company's data using CRUD operations, which I implemented in Next.js. I also setup authentication with the help of NextAuth google provider",
+      techStack: ["Next.js", "NextAuth", "Prisma"],
+      description:
+        "Developed a data management system using CRUD operations and integrated Google authentication via NextAuth.",
     },
   ];
 
   return (
-    <div className="w-full flex flex-col items-center py-16 bg-background text-text  mb-4">
-      <h1 className="text-4xl md:text-5xl text-center md:text-start font-bold mb-12">
-        Work Experience
-      </h1>
-      <div className="w-full max-w-3xl flex flex-col gap-8 px-6">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="flex flex-col gap-2 p-4 border-l-4 border-accent bg-white shadow-md rounded-md hover:scale-110 transition-transform transform "
-          >
-            <h2 className="text-2xl font-semibold text-accent">
-              {exp.company}
-            </h2>
-            <p className="text-lg font-medium">
-              {" "}
-              <span className="font-bold">Position:</span> {exp.position}
-            </p>
-            <p className="text-lg">
-              {" "}
-              <span className="font-bold">Duration: </span>
-              {exp.duration}
-            </p>
-            <p className="text-lg text-secondaryAccent">
-              <span className="font-bold">Tech Stack:</span> {exp.techStack}
-            </p>
-            <div>
-              <p className="font-bold">Description</p>
-              <p className="text-secondaryAccent">{exp.Description}</p>
+    <section className="w-full bg-background py-16 px-4 md:px-0 text-text">
+      <div className="max-w-3xl mx-auto">
+        <h1
+          id="Experience"
+          className="text-3xl md:text-4xl font-semibold mb-10 text-center md:text-center"
+        >
+          Work Experience
+        </h1>
+        <div className="space-y-6">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="rounded-2xl border border-border bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <h2 className="text-xl font-semibold text-accent">
+                  {exp.company}
+                </h2>
+                <span className="text-sm text-muted">{exp.duration}</span>
+              </div>
+              <p className="text-base font-medium mt-1">{exp.position}</p>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {exp.techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-xs bg-accent/10 text-accent px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className="text-md md:text-xl text-secondaryAccent mt-4 leading-relaxed">
+                {exp.description}
+              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

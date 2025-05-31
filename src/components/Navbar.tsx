@@ -46,7 +46,7 @@ const Navbar = () => {
         <li>
           <Link
             href="#about"
-            className="text-black bg-accent  rounded-md text-xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
+            className="text-black bg-accent  rounded-md text-2xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
           >
             About Me
           </Link>
@@ -54,17 +54,17 @@ const Navbar = () => {
         <li>
           <Link
             href="#skills"
-            className=" bg-accent text-black rounded-md text-xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
+            className=" bg-accent text-black rounded-md text-2xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
           >
             Skills
           </Link>
         </li>
         <li>
           <Link
-            href="#projects"
-            className=" bg-accent text-black rounded-md text-xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
+            href="#Experience"
+            className=" bg-accent text-black rounded-md text-2xl font-sans hover:underline hover:text-gray-500 hover:scale-110 transition-all duration-300"
           >
-            Projects
+            Experience
           </Link>
         </li>
       </ul>
@@ -90,11 +90,11 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#projects"
+              href="#experience"
               className="text-xl text-black font-semibold hover:text-accent transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
-              Projects
+              Experience
             </Link>
           </li>
           <li>

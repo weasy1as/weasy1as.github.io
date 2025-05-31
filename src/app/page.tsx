@@ -9,8 +9,7 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div>
-      <Intro /> <AboutMe /> <Skills /> <Experience /> <Projects />{" "}
-      <Certificate /> <Contact />
+      <Intro /> <AboutMe /> <Skills /> <Experience /> <Projects /> <Contact />
     </div>
   );
 }

@@ -41,21 +41,20 @@ const Intro = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center gap-4 text-center">
+        <div className="flex justify-center gap-4 text-center ">
           <Link
             href="/CV.pdf"
             download="Hassan_Abdulahi_CV"
-            className="bg-accent border-2 w-auto border-black p-4 font-bold hover:bg-black hover:text-white text-md rounded-[32px] text-black transition-all duration-300"
+            className="bg-accent border-2 border-black min-w-[180px] h-[50px] px-6 font-bold hover:bg-black hover:text-white text-md rounded-[32px] text-black flex items-center justify-center transition-all duration-300"
           >
-            Download My CV
+            Download CV
           </Link>
 
           <Link
-            href="/CV.pdf"
-            download="Hassan_Abdulahi_CV"
-            className="bg-gray-800 w-auto h-[50px] text-white  p-4 font-bold hover:bg-black hover:text-white text-md rounded-[32px] transition-all duration-300"
+            href="#contact"
+            className="bg-black text-white min-w-[180px] h-[50px] px-6 font-bold hover:bg-gray-600 hover:text-white text-md rounded-[32px] flex items-center justify-center transition-all duration-300"
           >
-            Download My CV
+            Contact Info
           </Link>
         </div>
 

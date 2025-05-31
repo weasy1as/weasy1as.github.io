@@ -1,7 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   const path = usePathname();

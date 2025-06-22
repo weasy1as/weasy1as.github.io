@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className=" mb-[150px] sm:mb-0 w-full h-[80px] flex justify-around items-center ">
       <div>
-        <h1 className="text-3xl  font-sans">Hassan Abdulai</h1>
+        <h1 className="text-3xl  font-sans">Hassan Abdulahi</h1>
       </div>
       <button
         onClick={handleOpen}

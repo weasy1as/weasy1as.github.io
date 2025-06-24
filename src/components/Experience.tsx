@@ -21,38 +21,42 @@ const Experience = () => {
   ];
 
   return (
-    <section className="w-full bg-background py-16 px-4 md:px-0 text-text">
-      <div className="max-w-3xl mx-auto">
-        <h1
-          id="Experience"
-          className="text-3xl md:text-4xl font-semibold mb-10 text-center md:text-center"
-        >
+    <section className="w-full bg-background py-16 px-4 text-text">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12">
           Work Experience
         </h1>
-        <div className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="rounded-2xl border border-border bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="border border-gray-200 rounded-3xl p-6 shadow-md bg-white hover:shadow-lg transition-all"
             >
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <h2 className="text-xl font-semibold text-accent">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-lg font-semibold text-accent">
                   {exp.company}
                 </h2>
-                <span className="text-sm text-muted">{exp.duration}</span>
+                <span className="text-xs bg-accent/10 text-accent px-3 py-1 rounded-full">
+                  {exp.duration}
+                </span>
               </div>
-              <p className="text-base font-medium mt-1">{exp.position}</p>
-              <div className="flex flex-wrap gap-2 mt-3">
+
+              <p className="text-md font-medium text-black mb-2">
+                {exp.position}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-4">
                 {exp.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-xs bg-accent/10 text-accent px-2 py-1 rounded-full"
+                    className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <p className="text-md md:text-xl text-secondaryAccent mt-4 leading-relaxed">
+
+              <p className="text-sm text-gray-600 leading-relaxed">
                 {exp.description}
               </p>
             </div>

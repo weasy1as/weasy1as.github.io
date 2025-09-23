@@ -8,6 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { DiPostgresql } from "react-icons/di";
 import { FaJava } from "react-icons/fa";
+import { SiSpringboot } from "react-icons/si";
 
 const Skills = () => {
   const skills = [
@@ -37,6 +38,10 @@ const Skills = () => {
     {
       name: "Java",
       icon: <FaJava size={80} className="text-[#007396]" />,
+    },
+    {
+      name: "Spring Boot",
+      icon: <SiSpringboot size={80} className="text-[#6DB33F]" />,
     },
   ];
   return (

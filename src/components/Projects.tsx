@@ -6,6 +6,10 @@ import {
   SiTailwindcss,
   SiPrisma,
   SiPostgresql,
+  SiReact,
+  SiSpringboot,
+  SiSupabase,
+  SiOpenai,
 } from "react-icons/si";
 
 const Projects = () => {
@@ -25,20 +29,21 @@ const Projects = () => {
       ],
     },
     {
-      name: "SteelBuilt",
+      name: "AI Job Match",
       description:
-        "SteelBuilt is a full-stack fitness tracking application that allows users to log workouts, set personal bests, track progress, and define fitness goals—all in a website.",
-      image: "/steelbuilt.png",
-      demo: "https://steel-built.vercel.app",
-      github: "https://github.com/weasy1as/SteelBuilt",
+        "AI Job Match is a full-stack web application that lets users upload resumes and job descriptions, then uses AI to compare them, highlight missing skills, and provide personalized improvement tips.",
+      image: "/aijobmatch.png",
+      github: "https://github.com/weasy1as/aijobmatch", // replace with your repo
       techStack: [
-        { icon: <SiNextdotjs />, name: "Next.js" },
-        { icon: <FaUserLock />, name: "NextAuth" },
+        { icon: <SiReact />, name: "React (Vite)" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <SiPrisma />, name: "Prisma" },
+        { icon: <SiSpringboot />, name: "Spring Boot" },
         { icon: <SiPostgresql />, name: "PostgreSQL" },
+        { icon: <SiSupabase />, name: "Supabase" },
+        { icon: <SiOpenai />, name: "OpenAI API" },
       ],
     },
+
     /*
     {
       name: "Blog-World",
@@ -115,14 +120,18 @@ const Projects = () => {
                 >
                   <FaGithub size={20} /> Github
                 </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border border-black px-4 py-2 rounded-full text-sm text-black font-medium hover:bg-black hover:text-black transition"
-                >
-                  Live Demo
-                </a>
+                {project.demo ? (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-black px-4 py-2 rounded-full text-sm text-black font-medium hover:bg-black hover:text-black transition"
+                  >
+                    Live Demo
+                  </a>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           ))}

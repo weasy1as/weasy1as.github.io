@@ -19,8 +19,8 @@ const Projects = () => {
       description:
         "Make smarter FPL decisions using AI-driven insights, player comparisons, and advanced stats.",
       image: "/fantasy-hub.png",
-      demo: "https://fantasy-hub-seven.vercel.app/",
-      github: "https://github.com/weasy1as/FantasyHub",
+      demo: "https://fantasy-world-delta.vercel.app/",
+      github: "https://github.com/weasy1as/FantasyWorld",
       techStack: [
         { icon: <SiNextdotjs />, name: "Next.js" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
@@ -125,7 +125,7 @@ const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-black px-4 py-2 rounded-full text-sm text-black font-medium hover:bg-black hover:text-black transition"
+                    className="border border-black px-4 py-2 rounded-full text-sm text-black font-medium hover:bg-black hover:text-white transition"
                   >
                     Live Demo
                   </a>

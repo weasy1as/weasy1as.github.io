@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaGithub, FaUserLock } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,

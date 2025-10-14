@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="p-3 rounded-full bg-muted group-hover:bg-accent/10 transition-all">
             <MdEmail
               size={28}
-              className="text-accent group-hover:scale-110 transition-transform"
+              className="text-accent group-hover:scale-110 transition-transform text-blue-500"
             />
           </div>
           <span className="text-base font-medium text-primary group-hover:text-accent transition-colors">
@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="p-3 rounded-full bg-muted group-hover:bg-accent/10 transition-all">
             <FaLinkedin
               size={28}
-              className="text-accent group-hover:scale-110 transition-transform"
+              className="text-blue-600 group-hover:scale-110 transition-transform"
             />
           </div>
           <span className="text-base font-medium text-primary group-hover:text-accent transition-colors">

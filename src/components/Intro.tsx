@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Intro = () => {
   /* <Link
@@ -26,7 +25,7 @@ const Intro = () => {
 
       <div className="flex flex-col items-center md:items-start gap-3">
         <div>
-          <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
+          <p className="text-primary text-lg font-medium mb-2">{`Hello, I'm`}</p>
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter mb-3">
             Hassan Abdulahi
           </h1>

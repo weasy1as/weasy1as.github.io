@@ -9,6 +9,7 @@ import { DiMongodb } from "react-icons/di";
 import { DiPostgresql } from "react-icons/di";
 import { FaJava } from "react-icons/fa";
 import { SiSpringboot } from "react-icons/si";
+import Marquee from "react-fast-marquee";
 
 const Skills = () => {
   const skills = [
@@ -49,17 +50,23 @@ const Skills = () => {
       <h1 id="skills" className="font-bold text-5xl">
         Skills
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 pt-12 gap-8">
+      <Marquee
+        gradient={false}
+        speed={45}
+        className=" py-6 space-x-10 overflow-hidden"
+      >
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col text-center items-center gap-2 hover:scale-110"
+            className="flex flex-col items-center text-center mx-8 transition-transform duration-300 hover:scale-110"
           >
-            <div> {skill.icon}</div>
-            <p className="text-lg font-medium">{skill.name}</p>
+            {skill.icon}
+            <p className="text-base md:text-lg font-medium mt-3 text-muted-foreground">
+              {skill.name}
+            </p>
           </div>
         ))}
-      </div>
+      </Marquee>
     </div>
   );
 };

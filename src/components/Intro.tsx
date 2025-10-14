@@ -24,23 +24,20 @@ const Intro = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col items-center md:items-start gap-3">
         <div>
-          <h1 className="relative text-center text-2xl md:text-2xl font-bold overflow-hidden whitespace-nowrap pb-2">
-            <span className="text-sm absolute text-center inset-0 bg-background animate-typewriter"></span>
-            <span className="text-secondaryAccent font-semibold font-sans">
-              Hello I am
-            </span>
-            <br />
-            <span className=" text-2xl md:text-4xl font-bold text-black font-sans">
-              Hassan Abdulahi
-            </span>
+          <p className="text-primary text-lg font-medium mb-2">Hello, I'm</p>
+          <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white leading-tight tracking-tighter mb-3">
+            Hassan Abdulahi
           </h1>
-          <h2 className="text-xl font-sans text-center text-secondaryAccent">
-            Software engineer
+          <h2 className="text-xl text-gray-600 dark:text-gray-400 font-medium mb-6">
+            Software Developer
           </h2>
         </div>
-
+        <p className="text-black dark:text-gray-300 mb-8 max-w-md mx-auto md:mx-0 px-6 md:px-0">
+          Passionate about crafting clean code and intuitive user experiences.
+          Eager to contribute to innovative projects and grow as a developer.
+        </p>
         <div className="flex justify-center gap-4 text-center ">
           <Link
             href="/CV.pdf"
@@ -52,27 +49,10 @@ const Intro = () => {
 
           <Link
             href="#contact"
-            className="bg-black text-white min-w-[180px] h-[50px] px-6 font-bold hover:bg-gray-600 hover:text-white text-md rounded-[32px] flex items-center justify-center transition-all duration-300"
+            className="bg-black text-white min-w-[180px] h-[50px] px-6 font-bold hover:bg-white hover:text-black hover:border-2 hover:border-black text-md rounded-[32px] flex items-center justify-center transition-all duration-300"
           >
             Contact Info
           </Link>
-        </div>
-
-        <div className="flex gap-6 justify-center mt-4">
-          <a
-            className="text-black hover:text-accent transition-transform transform hover:scale-110"
-            href="https://www.linkedin.com/in/hassan-abdulahi-80125529a"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin size={30} />
-          </a>
-          <a
-            className="text-black hover:text-accent transition-transform transform hover:scale-110"
-            href="https://github.com/weasy1as"
-            aria-label="GitHub"
-          >
-            <FaGithub size={30} />
-          </a>
         </div>
       </div>
     </div>

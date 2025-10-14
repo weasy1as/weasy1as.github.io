@@ -21,12 +21,15 @@ const Experience = () => {
   ];
 
   return (
-    <section className="w-full bg-background py-16 px-4 text-text">
+    <section
+      id="Experience"
+      className="w-full bg-background py-16 px-4 text-text"
+    >
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12">
           Work Experience
         </h1>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-1 gap-6">
           {experiences.map((exp, index) => (
             <div
               key={index}

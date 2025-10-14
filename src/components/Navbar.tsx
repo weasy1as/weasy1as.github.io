@@ -69,11 +69,11 @@ const Navbar = () => {
         </li>
       </ul>
       {isOpen && (
-        <ul className="absolute top-[80px]  w-auto h-auto bg-gray-200 flex flex-wrap gap-6 p-6 sm:hidden">
+        <ul className="absolute top-[80px] rounded-b-xl  w-full h-auto bg-black flex flex-col items-center gap-6 py-6 sm:hidden">
           <li>
             <Link
               href="#about"
-              className="text-xl text-black font-semibold hover:text-accent transition-all duration-300"
+              className="text-xl text-white font-semibold hover:text-accent transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
               About Me
@@ -82,7 +82,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#skills"
-              className="text-xl text-black font-semibold hover:text-accent transition-all duration-300"
+              className="text-xl text-white font-semibold hover:text-accent transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
               Skills
@@ -91,7 +91,7 @@ const Navbar = () => {
           <li>
             <Link
               href="#experience"
-              className="text-xl text-black font-semibold hover:text-accent transition-all duration-300"
+              className="text-xl text-white font-semibold hover:text-accent transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
               Experience
@@ -101,7 +101,7 @@ const Navbar = () => {
             <Link
               href="/CV.pdf"
               download="Hassan_Abdulahi_CV"
-              className="text-xl text-black font-semibold hover:text-accent transition-all duration-300"
+              className="text-xl text-white font-semibold hover:text-accent transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
               Download My CV

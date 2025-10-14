@@ -10,22 +10,22 @@ const Footer = () => {
     return null;
   }
   return (
-    <div className="w-full flex flex-col justify-center items-center p-6">
+    <div className="w-full flex flex-col justify-center items-center p-6 bg-black ">
       <div className="gap-8">
         <div>
           <ul className="flex gap-4 my-12 ">
             <li>
               <a
                 href="#about"
-                className=" bg-accent text-black rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
+                className=" bg-accent text-white font-bold underline rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
               >
-                About Me
+                About
               </a>
             </li>
             <li>
               <a
                 href="#skills"
-                className=" bg-accent text-black rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
+                className=" bg-accent text-white font-bold underline rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
               >
                 Skills
               </a>
@@ -33,7 +33,7 @@ const Footer = () => {
             <li>
               <a
                 href="#projects"
-                className=" bg-accent text-black rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
+                className=" bg-accent font-bold underline text-white rounded-md text-xl font-sans hover:text-gray-400  hover:scale-110 transition-all duration-300"
               >
                 Projects
               </a>
@@ -42,7 +42,7 @@ const Footer = () => {
               <a
                 href="/CV.pdf"
                 download="Hassan_Abdulahi_CV"
-                className=" bg-accent text-black rounded-md text-xl font-sans hover:text-gray-400 hover:scale-110 transition-all duration-300"
+                className=" bg-accent  font-bold underline text-white rounded-md text-xl font-sans hover:text-gray-400 hover:scale-110 transition-all duration-300"
               >
                 Download My CV
               </a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-sm md:text-base mt-6 text-center">
+      <p className="text-sm md:text-base mt-6 text-center text-white">
         © {new Date().getFullYear()} Hassan Abdulahi. All rights reserved.
       </p>
     </div>

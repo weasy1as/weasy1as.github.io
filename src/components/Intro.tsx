@@ -4,13 +4,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowDownCircle } from "lucide-react";
 
 const Intro = () => {
   return (
     <section
       id="intro"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-14 md:gap-24 px-6 md:px-16 bg-gradient-to-b from-background to-muted/20"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-14 md:gap-24 px-6 md:px-16 bg-gradient-to-b from-background to-muted/20 mt-[150px]"
     >
       {/* Profile Image */}
       <motion.div
@@ -68,29 +67,6 @@ const Intro = () => {
             </Link>
           </div>
         </div>
-      </motion.div>
-
-      {/* Scroll Down Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{
-          repeat: Infinity,
-          duration: 2,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-8 flex justify-center w-full text-muted-foreground"
-      >
-        <Link
-          href="#about"
-          scroll={true}
-          className="cursor-pointer hover:text-accent transition-colors duration-300"
-        >
-          <ArrowDownCircle
-            size={36}
-            className="opacity-70 hover:opacity-100 transition-opacity"
-          />
-        </Link>
       </motion.div>
     </section>
   );

@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -11,13 +14,15 @@ import {
   SiSupabase,
   SiOpenai,
 } from "react-icons/si";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Projects = () => {
   const myProjects = [
     {
       name: "Fantasy Hub",
       description:
-        "Make smarter FPL decisions using AI-driven insights, player comparisons, and advanced stats.",
+        "An AI-powered Fantasy Premier League companion that helps users make smarter FPL decisions using player insights, comparisons, and advanced stats.",
       image: "/fantasy-hub.png",
       demo: "https://fantasy-world-delta.vercel.app/",
       github: "https://github.com/weasy1as/FantasyWorld",
@@ -31,9 +36,9 @@ const Projects = () => {
     {
       name: "AI Job Match",
       description:
-        "AI Job Match is a full-stack web application that lets users upload resumes and job descriptions, then uses AI to compare them, highlight missing skills, and provide personalized improvement tips.",
+        "A full-stack web app that uses AI to analyze and match resumes with job descriptions, highlighting skill gaps and providing tailored improvement suggestions.",
       image: "/aijobmatch.png",
-      github: "https://github.com/weasy1as/aijobmatch", // replace with your repo
+      github: "https://github.com/weasy1as/aijobmatch",
       techStack: [
         { icon: <SiReact />, name: "React (Vite)" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
@@ -43,100 +48,95 @@ const Projects = () => {
         { icon: <SiOpenai />, name: "OpenAI API" },
       ],
     },
-
-    /*
-    {
-      name: "Blog-World",
-      description:
-        "Create an account, post blogs, and explore others' content in a clean and social layout.",
-      image: "/images/blog-world.png",
-      demo: "https://blog-world.vercel.app",
-      github: "https://github.com/weasy1as/Blog-World",
-      techStack: [
-        { icon: <SiNextdotjs />, name: "Next.js" },
-        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <SiPrisma />, name: "Prisma" },
-        { icon: <SiPostgresql />, name: "PostgreSQL" },
-      ],
-    },
-    
-    /*{
-      name: "Job Tracker",
-      description:
-        "Track your job applications, view them in a dashboard, and log progress easily.",
-      image: "/images/job-tracker.png",
-      demo: "https://job-tracker.vercel.app",
-      github: "https://github.com/weasy1as/JobTracker",
-      techStack: [
-        { icon: <SiNextdotjs />, name: "Next.js" },
-        { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <SiPrisma />, name: "Prisma" },
-        { icon: <SiPostgresql />, name: "PostgreSQL" },
-      ],
-    },
-    */
   ];
 
   return (
     <section
       id="projects"
-      className="w-full bg-background py-16 px-4 text-text"
+      className="py-20 bg-gradient-to-b from-background to-muted/30"
     >
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
-        <div className="grid md:grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-sm uppercase tracking-widest text-accent font-semibold mb-2">
+            Portfolio
+          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Featured Projects
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A selection of projects showcasing my ability to design, develop,
+            and deliver modern, scalable web applications.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-10">
           {myProjects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border border-black rounded-3xl p-9 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all bg-white"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              viewport={{ once: true }}
             >
-              <Image
-                height={300}
-                width={300}
-                src={project.image}
-                alt={`${project.name} screenshot`}
-                className="rounded-2xl h-56 w-full object-cover mb-4 shadow-lg"
-              />
-              <h2 className="text-xl font-bold mb-2">{project.name}</h2>
-              <p className="text-gray-600 text-sm mb-4">
-                {project.description}
-              </p>
+              <Card className="group relative overflow-hidden rounded-3xl border-border/40 hover:shadow-lg transition-all duration-300">
+                {/* Image */}
+                <div className="relative w-full h-56 overflow-hidden rounded-t-3xl">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-              <div className="flex flex-wrap justify-center gap-2 mb-4">
-                {project.techStack.map((tech, i) => (
-                  <div
-                    key={i}
-                    className="bg-gray-100 p-2 rounded-md text-lg"
-                    title={tech.name}
-                  >
-                    {tech.icon}
+                <CardContent className="p-6 flex flex-col gap-4">
+                  <h2 className="text-2xl font-semibold text-foreground">
+                    {project.name}
+                  </h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.techStack.map((tech, i) => (
+                      <Badge
+                        key={i}
+                        variant="secondary"
+                        className="flex items-center gap-1 px-3 py-1 text-xs"
+                      >
+                        {tech.icon}
+                        {tech.name}
+                      </Badge>
+                    ))}
                   </div>
-                ))}
-              </div>
 
-              <div className="flex gap-4 mt-auto">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border px-4 py-2 rounded-full text-sm font-medium bg-black text-white transition"
-                >
-                  <FaGithub size={20} /> Github
-                </a>
-                {project.demo ? (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border border-black px-4 py-2 rounded-full text-sm text-black font-medium hover:bg-black hover:text-white transition"
-                  >
-                    Live Demo
-                  </a>
-                ) : (
-                  ""
-                )}
-              </div>
-            </div>
+                  {/* Buttons */}
+                  <div className="flex gap-3 mt-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+                    >
+                      <FaGithub /> Code
+                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 border border-foreground text-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-foreground hover:text-background transition-all"
+                      >
+                        <FaExternalLinkAlt /> Demo
+                      </a>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

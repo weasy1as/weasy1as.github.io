@@ -1,61 +1,106 @@
+"use client";
+
 import React from "react";
-import { FaUniversity } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaUniversity, FaLaptopCode } from "react-icons/fa";
+import { Card, CardContent } from "@/components/ui/card";
 
 const AboutMe = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center py-16 px-6 bg-gradient-to-b from-background to-muted/20"
+      className="w-full py-20 px-6 bg-gradient-to-b from-background to-muted/20 flex flex-col items-center justify-center"
     >
-      {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-primary mb-10 tracking-tight">
-        About Me
-      </h1>
-
-      {/* Info Card */}
-      <div className="bg-card border border-border rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 max-w-2xl w-full p-6 md:p-8 mb-10">
-        <div className="flex items-center gap-4 mb-3">
-          <div className="text-accent text-3xl">
-            <FaUniversity />
-          </div>
-          <div>
-            <h2 className="text-xl font-semibold text-foreground">
-              Education: Software Technology
-            </h2>
-            <p className="text-sm text-muted-foreground italic">
-              Bachelor of Engineering
-            </p>
-          </div>
-        </div>
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-          Graduated with a strong foundation in software engineering principles,
-          focusing on full-stack web development, object-oriented programming,
-          and modern frameworks.
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center mb-16 max-w-3xl"
+      >
+        <h2 className="text-sm uppercase tracking-widest text-accent font-semibold mb-2">
+          Who Am I
+        </h2>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+          About Me
+        </h1>
+        <p className="text-muted-foreground text-base md:text-lg">
+          A passionate and detail-oriented software engineer with a love for
+          building intuitive digital experiences and solving real-world problems
+          through clean code.
         </p>
-      </div>
+      </motion.div>
+
+      {/* Education / Highlights */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="max-w-2xl w-full mb-12"
+      >
+        <Card className="border-border/50 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl">
+          <CardContent className="p-6 md:p-8 flex items-start gap-5">
+            <div className="p-3 bg-accent/10 text-accent rounded-xl text-3xl">
+              <FaUniversity />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground">
+                Bachelor of Engineering – Software Technology
+              </h3>
+              <p className="text-sm text-muted-foreground italic mb-2">
+                University of Southern Denmark
+              </p>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                Graduated with a strong foundation in full-stack development,
+                OOP, and modern frameworks such as Next.js and Spring Boot.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
 
       {/* About Paragraph */}
-      <div className="max-w-3xl text-center text-black text-base  md:text-lg leading-relaxed space-y-4">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="max-w-3xl text-center space-y-5 text-muted-foreground text-base md:text-lg leading-relaxed"
+      >
         <p>
-          I’m a newly graduated{" "}
-          <span className="text-primary font-medium">Software Engineer</span>{" "}
-          eager to step into the professional world and make a meaningful
-          contribution to the tech industry.
+          I’m a{" "}
+          <span className="text-foreground font-medium">software engineer</span>{" "}
+          who loves turning complex ideas into simple, elegant solutions. I
+          enjoy working on projects that challenge me to learn new technologies
+          and improve my design thinking.
         </p>
         <p>
-          I have a strong passion for technology and development, and I’m always
-          ready to learn, grow, and tackle new challenges. I thrive in{" "}
-          <span className="text-primary font-medium">
-            collaborative environments
+          Collaboration is at the core of how I work. I thrive in{" "}
+          <span className="text-foreground font-medium">team environments</span>{" "}
+          where developers, designers, and product thinkers work together to
+          build meaningful software.
+        </p>
+        <p>
+          My goal is to continue growing as a developer who creates{" "}
+          <span className="text-accent font-medium">
+            impactful, human-centered
           </span>{" "}
-          where I can build innovative solutions that make a difference.
+          applications that solve real problems and inspire users.
         </p>
-        <p>
-          My goal is to continue expanding my skills and become a well-rounded,
-          impactful developer — one who builds software that is both technically
-          solid and meaningful to its users.
-        </p>
-      </div>
+      </motion.div>
+
+      {/* Optional Icon Divider */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        viewport={{ once: true }}
+        className="mt-12 text-accent text-3xl"
+      >
+        <FaLaptopCode />
+      </motion.div>
     </section>
   );
 };

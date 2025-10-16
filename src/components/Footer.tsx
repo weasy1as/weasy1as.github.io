@@ -38,22 +38,21 @@ const Footer = () => {
       {/* Social Links */}
       <div className="flex gap-5 mb-6">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/weasy1as"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-accent transition-transform transform hover:scale-110"
           aria-label="GitHub"
         >
-          <FaGithub size={22} />
+          <FaGithub size={32} />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="http://www.linkedin.com/in/hassan-abdulahi-80125529a"
           target="_blank"
-          rel="noopener noreferrer"
           className="text-muted-foreground hover:text-accent transition-transform transform hover:scale-110"
           aria-label="LinkedIn"
         >
-          <FaLinkedin size={22} />
+          <FaLinkedin size={32} />
         </a>
       </div>
 

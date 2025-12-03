@@ -29,7 +29,7 @@ const Projects = () => {
       techStack: [
         { icon: <SiNextdotjs />, name: "Next.js" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
-        { icon: <SiPrisma />, name: "Prisma" },
+
         { icon: <SiPostgresql />, name: "Supabase" },
         { icon: <SiOpenai />, name: "OpenAI API" },
       ],

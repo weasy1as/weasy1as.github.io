@@ -30,7 +30,8 @@ const Projects = () => {
         { icon: <SiNextdotjs />, name: "Next.js" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
         { icon: <SiPrisma />, name: "Prisma" },
-        { icon: <SiPostgresql />, name: "Supabase PostgreSQL" },
+        { icon: <SiPostgresql />, name: "Supabase" },
+        { icon: <SiOpenai />, name: "OpenAI API" },
       ],
     },
     {
@@ -40,7 +41,7 @@ const Projects = () => {
       image: "/aijobmatch.png",
       github: "https://github.com/weasy1as/aijobmatch",
       techStack: [
-        { icon: <SiReact />, name: "React (Vite)" },
+        { icon: <SiReact />, name: "React" },
         { icon: <SiTailwindcss />, name: "Tailwind CSS" },
         { icon: <SiSpringboot />, name: "Spring Boot" },
         { icon: <SiPostgresql />, name: "PostgreSQL" },
@@ -80,7 +81,7 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
             >
-              <Card className="group relative overflow-hidden rounded-3xl border-border/40 hover:shadow-lg transition-all duration-300">
+              <Card className="group h-full relative overflow-hidden rounded-3xl border-border/40 hover:shadow-lg transition-all duration-300">
                 {/* Image */}
                 <div className="relative w-full h-56 overflow-hidden rounded-t-3xl">
                   <Image

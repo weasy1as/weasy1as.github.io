@@ -1,5 +1,3 @@
-import { FaLocationArrow } from "react-icons/fa6";
-
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";

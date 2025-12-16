@@ -4,8 +4,6 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -66,7 +64,7 @@ const Hero = () => {
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title="Get to know me"
               icon={<FaLocationArrow />}
               position="right"
             />

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { FaUniversity, FaLaptopCode } from "react-icons/fa";
 
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const AboutMe = () => {
   return (

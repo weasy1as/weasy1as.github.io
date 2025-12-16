@@ -2,11 +2,10 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
-  SiPrisma,
   SiPostgresql,
   SiReact,
   SiSpringboot,

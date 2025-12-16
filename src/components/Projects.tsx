@@ -14,10 +14,11 @@ import {
 } from "react-icons/si";
 import { PinContainer } from "./ui/pin";
 import { Badge } from "./ui/badge";
+import Image from "next/image";
 
 const RecentProjects = () => {
   const iconClass =
-    "text-gray-300 group-hover:text-purple transition-colors duration-200";
+    "text-blue-500 group-hover:text-purple transition-colors duration-200";
 
   const projects = [
     {
@@ -66,7 +67,9 @@ const RecentProjects = () => {
           >
             <PinContainer title={item.github} href={item.github}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                <img
+                <Image
+                  width={500}
+                  height={500}
                   src={item.image}
                   alt="cover"
                   className="z-10 absolute bottom-0"
@@ -88,7 +91,7 @@ const RecentProjects = () => {
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex flex-wrap items-center">
+                <div className="flex flex-wrap gap-1 items-center">
                   {item.techStack.map((tech, i) => (
                     <Badge
                       key={i}

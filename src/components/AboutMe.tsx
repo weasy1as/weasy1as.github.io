@@ -86,9 +86,7 @@ const AboutMe = () => {
 
         <p>
           My goal is to continue growing as a developer who creates{" "}
-          <span className="text-purple-400 font-medium">
-            impactful, human-centered
-          </span>{" "}
+          <span className="text-purple-400 font-medium">impactful,</span>{" "}
           applications that solve real problems and feel intuitive to use.
         </p>
       </div>

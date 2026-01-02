@@ -2,7 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3, FaReact, FaGithub, FaJava } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaGithub,
+  FaJava,
+  FaLinux,
+  FaDocker,
+} from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb, DiPostgresql } from "react-icons/di";
 import { SiSpringboot, SiPrisma, SiOpenai } from "react-icons/si";
@@ -83,6 +91,18 @@ const Skills = () => {
           title: "OpenAI API",
           description: "AI-powered features and integrations.",
           icon: <SiOpenai className="text-purple-500" />,
+        },
+        {
+          title: "Docker",
+          description:
+            "Containerization, image builds, and deployment workflows.",
+          icon: <FaDocker className="text-blue-500" />,
+        },
+        {
+          title: "Linux",
+          description:
+            "Command-line tools, system administration, and server environments.",
+          icon: <FaLinux className="text-yellow-500" />,
         },
       ],
     },

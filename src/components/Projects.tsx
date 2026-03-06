@@ -25,9 +25,9 @@ const RecentProjects = () => {
       name: "Fantasy Hub",
       description:
         "An AI-powered Fantasy Premier League companion that helps users make smarter FPL decisions using player insights, comparisons, and advanced stats.",
-      image: "/fantasy-hub.png",
-      demo: "https://fantasy-world-delta.vercel.app/",
-      github: "https://github.com/weasy1as/FantasyWorld",
+      image: "/fantasyLab.png",
+      demo: "https://fantasy-lab-inky.vercel.app/",
+      github: "https://github.com/weasy1as/FantasyLab",
       techStack: [
         { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
         { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
@@ -36,7 +36,7 @@ const RecentProjects = () => {
         { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
       ],
     },
-    {
+    /* {
       name: "AI Job Match",
       description:
         "A full-stack web app that uses AI to analyze and match resumes with job descriptions, highlighting skill gaps and providing tailored improvement suggestions.",
@@ -51,6 +51,7 @@ const RecentProjects = () => {
         { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
       ],
     },
+    */
   ];
 
   return (

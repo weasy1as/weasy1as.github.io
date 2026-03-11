@@ -2,19 +2,19 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { FaGithub } from "react-icons/fa";
+import { FaDocker, FaGithub, FaHtml5 } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiPostgresql,
-  SiReact,
-  SiSpringboot,
-  SiSupabase,
   SiOpenai,
+  SiN8N,
+  SiGoogle,
 } from "react-icons/si";
 import { PinContainer } from "./ui/pin";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 const RecentProjects = () => {
   const iconClass =
@@ -23,6 +23,7 @@ const RecentProjects = () => {
   const projects = [
     {
       name: "Fantasy Hub",
+      shortName: "fantasy-hub",
       description:
         "An AI-powered Fantasy Premier League companion that helps users make smarter FPL decisions using player insights, comparisons, and advanced stats.",
       image: "/fantasyLab.png",
@@ -31,11 +32,28 @@ const RecentProjects = () => {
       techStack: [
         { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
         { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
-
         { icon: <SiPostgresql className={iconClass} />, name: "Supabase" },
         { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
       ],
     },
+    {
+      name: "Automated Job Alerts Workflow",
+      shortName: "job-alerts-workflow",
+      description:
+        "A workflow built in n8n that automatically pulls jobs from Jobindex and IT Jobbank, filters them by roles, skills, and experience, removes duplicates using Google Sheets, and sends personalized daily emails with relevant job listings.",
+      image: "/n8n-job-alerts.png",
+      demo: "/project/job-alerts-workflow", // optional internal demo link
+      techStack: [
+        { icon: <SiN8N className={iconClass} />, name: "n8n" },
+        { icon: <FaDocker className={iconClass} />, name: "Docker" },
+        {
+          icon: <SiGoogle className={iconClass} />,
+          name: "Google Sheets & Gmail API",
+        },
+        { icon: <FaHtml5 className={iconClass} />, name: "HTML Parsing / RSS" },
+      ],
+    },
+
     /* {
       name: "AI Job Match",
       description:
@@ -67,7 +85,7 @@ const RecentProjects = () => {
             key={item.name}
           >
             <PinContainer title={item.github} href={item.github}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
                 <Image
                   width={500}
                   height={500}
@@ -91,8 +109,8 @@ const RecentProjects = () => {
                 {item.description}
               </p>
 
-              <div className="flex items-center justify-between mt-7 mb-3">
-                <div className="flex flex-wrap gap-1 items-center">
+              <div className="flex flex-col gap-4 items-center justify-between mt-7 mb-3">
+                <div className="flex flex-wrap gap-4 items-center">
                   {item.techStack.map((tech, i) => (
                     <Badge
                       key={i}
@@ -116,14 +134,26 @@ const RecentProjects = () => {
                       Demo
                     </a>
                   )}
-                  <a
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-all"
-                  >
-                    <FaGithub /> Code
-                  </a>
+
+                  {item.github && (
+                    <a
+                      href={item.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+                    >
+                      <FaGithub /> Code
+                    </a>
+                  )}
+
+                  {item.shortName && (
+                    <Link
+                      href={`/project/${item.shortName}`}
+                      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+                    >
+                      <FaLocationArrow /> Learn
+                    </Link>
+                  )}
                 </div>
               </div>
             </PinContainer>

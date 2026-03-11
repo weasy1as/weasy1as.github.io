@@ -13,10 +13,9 @@ import {
 } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb, DiPostgresql } from "react-icons/di";
-import { SiSpringboot, SiPrisma, SiOpenai } from "react-icons/si";
+import { SiSpringboot, SiPrisma, SiOpenai, SiN8N } from "react-icons/si";
 
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-
 const Skills = () => {
   const skillCategories = [
     {
@@ -103,6 +102,11 @@ const Skills = () => {
           description:
             "Command-line tools, system administration, and server environments.",
           icon: <FaLinux className="text-yellow-500" />,
+        },
+        {
+          title: "n8n",
+          description: "Workflow automation",
+          icon: <SiN8N className="text-[#e91e63]" />, // you can import an n8n icon or reuse a generic automation icon
         },
       ],
     },

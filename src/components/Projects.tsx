@@ -42,7 +42,7 @@ const RecentProjects = () => {
       description:
         "A workflow built in n8n that automatically pulls jobs from Jobindex and IT Jobbank, filters them by roles, skills, and experience, removes duplicates using Google Sheets, and sends personalized daily emails with relevant job listings.",
       image: "/n8n-job-alerts.png",
-      demo: "/project/job-alerts-workflow", // optional internal demo link
+      demo: undefined,
       techStack: [
         { icon: <SiN8N className={iconClass} />, name: "n8n" },
         { icon: <FaDocker className={iconClass} />, name: "Docker" },

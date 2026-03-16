@@ -38,7 +38,7 @@ const project: Project = {
   name: "Fantasy Hub",
   tagline: "AI-powered FPL decisions, simplified.",
   description: "An AI-powered Fantasy Premier League companion...",
-  image: "/fantasyLab.png",
+  image: "/FantasyLab.png",
   demo: "https://fantasy-lab-inky.vercel.app/",
   github: "https://github.com/weasy1as/FantasyLab",
   techStack: [

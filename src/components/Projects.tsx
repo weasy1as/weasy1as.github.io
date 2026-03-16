@@ -26,7 +26,7 @@ const RecentProjects = () => {
       shortName: "fantasy-hub",
       description:
         "An AI-powered Fantasy Premier League companion that helps users make smarter FPL decisions using player insights, comparisons, and advanced stats.",
-      image: "/fantasyLab.png",
+      image: "/FantasyLab.png",
       demo: "https://fantasy-lab-inky.vercel.app/",
       github: "https://github.com/weasy1as/FantasyLab",
       techStack: [

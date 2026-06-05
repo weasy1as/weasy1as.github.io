@@ -10,6 +10,7 @@ import {
   SiOpenai,
   SiN8N,
   SiGoogle,
+  SiStripe,
 } from "react-icons/si";
 import { PinContainer } from "./ui/pin";
 import { Badge } from "./ui/badge";
@@ -34,6 +35,22 @@ const RecentProjects = () => {
         { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
         { icon: <SiPostgresql className={iconClass} />, name: "Supabase" },
         { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
+      ],
+    },
+    {
+      name: "JobFlow",
+      shortName: "jobTracker",
+      description:
+        "A modern AI-assisted job application tracker SaaS that helps users organize, track, and analyze their job search using a Kanban workflow, analytics (WIP), and optional AI interview preparation.",
+      image: "/JobTracker-saas.png",
+      github: "https://github.com/weasy1as/JobTrackerSaas",
+      demo: undefined,
+      techStack: [
+        { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
+        { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
+        { icon: <SiPostgresql className={iconClass} />, name: "Supabase" },
+        { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
+        { icon: <SiStripe className={iconClass} />, name: "Stripe" },
       ],
     },
     {
@@ -81,7 +98,7 @@ const RecentProjects = () => {
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="m-4 lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.name}
           >
             <PinContainer title={item.github} href={item.github}>

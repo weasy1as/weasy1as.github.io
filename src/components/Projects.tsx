@@ -44,7 +44,7 @@ const RecentProjects = () => {
         "A modern AI-assisted job application tracker SaaS that helps users organize, track, and analyze their job search using a Kanban workflow, analytics (WIP), and optional AI interview preparation.",
       image: "/JobTracker-saas.png",
       github: "https://github.com/weasy1as/JobTrackerSaas",
-      demo: undefined,
+      demo: "https://job-tracker-saas-iota.vercel.app/",
       techStack: [
         { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
         { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },

@@ -43,7 +43,7 @@ const project: Project = {
     "JobFlow is a modern job application tracking SaaS that combines a Kanban-style workflow with optional AI-powered interview preparation. It helps users organize, track, and analyze their job search process in a clean, data-driven interface.",
   image: "/JobTracker-saas.png",
   image2: "/dashboard-screenshot.png",
-  demo: "x",
+  demo: "https://job-tracker-saas-iota.vercel.app/",
   github: "https://github.com/weasy1as/JobTrackerSaas",
   techStack: [
     { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
@@ -180,6 +180,17 @@ export default function JobFlowPage() {
 
       {/* Links */}
       <div className="flex flex-wrap gap-3">
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-foreground text-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-foreground hover:text-background transition-all"
+          >
+            <FaLocationArrow color="#CBACF9" />
+            Live Demo
+          </a>
+        )}
         {project.github && (
           <a
             href={project.github}

@@ -11,6 +11,9 @@ import {
   SiN8N,
   SiGoogle,
   SiStripe,
+  SiExpo,
+  SiReact,
+  SiSupabase,
 } from "react-icons/si";
 import { PinContainer } from "./ui/pin";
 import { Badge } from "./ui/badge";
@@ -68,6 +71,20 @@ const RecentProjects = () => {
           name: "Google Sheets & Gmail API",
         },
         { icon: <FaHtml5 className={iconClass} />, name: "HTML Parsing / RSS" },
+      ],
+    },
+    {
+      name: "GymFlow",
+      shortName: "gymflow",
+      description:
+        "Add a short description of GymFlow and the problem it helps users solve.",
+      image: "/workoutLog.png",
+      demo: undefined,
+      github: "https://github.com/weasy1as/FitnessApp",
+      techStack: [
+        { icon: <SiReact className={iconClass} />, name: "React Native" },
+        { icon: <SiExpo className={iconClass} />, name: "Expo" },
+        { icon: <SiSupabase className={iconClass} />, name: "Supabase" },
       ],
     },
 

@@ -1,21 +1,14 @@
-# ⚽ Fantasy Hub
+# Portfolio Website
 
-**Fantasy Hub** is your go-to tool for making smarter Fantasy Premier League (FPL) decisions. Whether you're checking stats, comparing players, or asking AI for insights — Fantasy Hub puts advanced analytics in your hands.
+A personal portfolio website showcasing my **background, skills, and featured projects**. It provides an overview of my experience and highlights selected work to give visitors a quick look at what I do and what I’ve built.
 
-## 🌟 Features
+## Features
 
-- 🔍 **Search** Premier League players instantly
-- 📊 **Team View**: Browse all players by team, grouped by position
-- 🧠 **AI Insights**: Get smart, context-aware player advice
-- 🤝 **Compare Players**: Side-by-side performance breakdowns and Ai comparison.
+* Personal background and introduction
+* Overview of technical and professional skills
+* Featured projects with descriptions
+* Clean, responsive design
 
----
+## Purpose
 
-## 🧰 Tech Stack
-
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **ORM**: [Prisma](https://www.prisma.io/)
-- **Database**: [Supabase](https://supabase.com/) PostgreSQL
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **AI**: OpenAI-powered insights & comparisons
-- **Deployment**: [Vercel](https://vercel.com/)
+The website serves as a central place to showcase my experience, skills, and projects.

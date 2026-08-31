@@ -29,7 +29,7 @@ const AboutMe = () => {
         </h1>
 
         <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-          I’m a software engineer who values clean architecture, thoughtful
+          I&apos;m a software engineer who values clean architecture, thoughtful
           design, and collaboration — with a focus on creating products that
           genuinely help people.
         </p>
@@ -84,7 +84,7 @@ const AboutMe = () => {
 
               <div>
                 <h3 className="text-xl font-semibold text-foreground">
-                  Master's in Software Engineering
+                  Master&apos;s in Software Engineering
                 </h3>
 
                 <p className="text-sm text-muted-foreground italic mb-2">
@@ -105,7 +105,7 @@ const AboutMe = () => {
       {/* About Highlights */}
       <div className="max-w-xl w-full mb-16 space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed text-center">
         <p>
-          I’m a{" "}
+          I&apos;m a{" "}
           <span className="text-foreground font-medium">software engineer</span>{" "}
           who enjoys turning complex ideas into simple, elegant solutions. I
           love working on projects that encourage learning, experimentation, and

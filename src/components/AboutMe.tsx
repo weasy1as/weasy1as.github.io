@@ -18,7 +18,7 @@ const AboutMe = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center mb-20 max-w-3xl"
+        className="text-center mb-20 lg:pt-[150px] max-w-3xl"
       >
         <h2 className="text-sm uppercase tracking-widest text-purple-400 font-semibold mb-3">
           A little about me
@@ -35,38 +35,73 @@ const AboutMe = () => {
         </p>
       </motion.div>
 
-      {/* Education Card */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        viewport={{ once: true }}
-        className="max-w-2xl w-full mb-20"
-      >
-        <BackgroundGradient className="rounded-2xl p-[1px]">
-          <div className="bg-background rounded-2xl p-6 md:p-8 flex items-start gap-5">
-            <div className="p-3 bg-purple-500/10 text-purple-400 rounded-xl text-3xl">
-              <FaUniversity />
+      {/* Education Card - Bachelor's */}
+      <div className="flex md:flex-row flex-col gap-2">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="max-w-2xl w-full mb-20"
+        >
+          <BackgroundGradient className="rounded-2xl p-[1px]">
+            <div className="bg-background rounded-2xl p-6 md:p-8 flex items-start gap-5">
+              <div className="p-3 bg-purple-500/10 text-purple-400 rounded-xl text-3xl">
+                <FaUniversity />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">
+                  Bachelor of Engineering – Software Technology
+                </h3>
+
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  University of Southern Denmark
+                </p>
+
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  Graduated with a strong foundation in full-stack development,
+                  object-oriented programming, and modern frameworks such as
+                  Next.js and Spring Boot.
+                </p>
+              </div>
             </div>
+          </BackgroundGradient>
+        </motion.div>
+        {/* Education Card - Master's */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="max-w-2xl w-full mb-20"
+        >
+          <BackgroundGradient className="rounded-2xl p-[1px]">
+            <div className="bg-background rounded-2xl p-6 md:p-8 flex items-start gap-5">
+              <div className="p-3 bg-purple-500/10 text-purple-400 rounded-xl text-3xl">
+                <FaUniversity />
+              </div>
 
-            <div>
-              <h3 className="text-xl font-semibold text-foreground">
-                Bachelor of Engineering – Software Technology
-              </h3>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">
+                  Master's in Software Engineering
+                </h3>
 
-              <p className="text-sm text-muted-foreground italic mb-2">
-                University of Southern Denmark
-              </p>
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  Currently pursuing
+                </p>
 
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Graduated with a strong foundation in full-stack development,
-                object-oriented programming, and modern frameworks such as
-                Next.js and Spring Boot.
-              </p>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  Advancing my expertise in software engineering principles,
+                  system design, and modern software development practices while
+                  applying hands-on knowledge to real-world projects.
+                </p>
+              </div>
             </div>
-          </div>
-        </BackgroundGradient>
-      </motion.div>
+          </BackgroundGradient>
+        </motion.div>
+      </div>
+
       {/* About Highlights */}
       <div className="max-w-xl w-full mb-16 space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed text-center">
         <p>

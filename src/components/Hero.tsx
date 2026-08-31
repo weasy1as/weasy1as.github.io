@@ -2,7 +2,7 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import Image from "next/image";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -52,6 +52,28 @@ const Hero = () => {
               position="right"
             />
           </a>
+
+          {/* Social Links */}
+          <div className="flex gap-6 mt-8 relative z-20">
+            <a
+              href="https://github.com/weasy1as"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-purple-400 transition-transform transform hover:scale-125"
+              aria-label="GitHub"
+            >
+              <FaGithub size={40} />
+            </a>
+            <a
+              href="http://www.linkedin.com/in/hassan-abdulahi-80125529a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-purple-400 transition-transform transform hover:scale-125"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin size={40} />
+            </a>
+          </div>
         </div>
         <div className="relative group w-[260px] h-[260px] md:w-[320px] md:h-[320px] rounded-full overflow-hidden shadow-xl border-4 border-accent">
           <Image

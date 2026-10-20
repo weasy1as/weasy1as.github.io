@@ -3,15 +3,12 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import { GrHeroku } from "react-icons/gr";
 
-import { FaDocker, FaGithub, FaHtml5, FaJava } from "react-icons/fa";
+import { FaDocker, FaGithub, FaJava } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiPostgresql,
   SiOpenai,
-  SiN8N,
-  SiGoogle,
-  SiStripe,
   SiExpo,
   SiReact,
   SiSupabase,
@@ -100,21 +97,21 @@ const RecentProjects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-x-16 gap-y-28 mt-10">
         {projects.map((item) => (
           <div
             className="m-4 lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.name}
           >
             <PinContainer title={item.github ?? item.name} href={item.github}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10 rounded-xl bg-white/[.03]">
                 {item.image ? (
                   <Image
-                    width={500}
-                    height={500}
+                    fill
                     src={item.image}
                     alt="cover"
-                    className="z-10 absolute bottom-0"
+                    sizes="(min-width: 640px) 384px, 80vw"
+                    className="z-10 object-contain p-3"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-purple-950">

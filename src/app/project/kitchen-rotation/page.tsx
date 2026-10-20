@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowLeft, FaDocker, FaGithub, FaJava } from "react-icons/fa";
+import {
+  FaArrowLeft,
+  FaDocker,
+  FaGithub,
+  FaJava,
+  FaLocationArrow,
+} from "react-icons/fa";
 import { GrHeroku } from "react-icons/gr";
 import {
   SiNextdotjs,
@@ -26,7 +32,7 @@ type TechItem = {
 const project = {
   name: "Kitchen Rotation",
   tagline: "A fair, configurable cleaning schedule for every household.",
-  github: "https://github.com/weasy1as/Kitchen-Rotation",
+  github: "https://github.com/weasy1as/Household-App",
   image: "/Household.png",
   demo: "https://household-app-green-nu.vercel.app/",
   description:
@@ -141,22 +147,38 @@ export default function KitchenRotationPage() {
       <section className="mb-16">
         <h2 className="text-xl font-semibold mb-3 text-purple">Project Goal</h2>
         <p className="text-white/70 leading-relaxed">
-          Kitchen Rotation was built for my family&apos;s needs and aims to provide a
-          simple, practical, and accessible way for households to distribute
-          cleaning responsibilities. It also serves as an opportunity to develop
-          and deploy a complete full-stack application using modern web
-          technologies, relational database design, authentication, REST API
+          Kitchen Rotation was built for my family&apos;s needs and aims to
+          provide a simple, practical, and accessible way for households to
+          distribute cleaning responsibilities. It also serves as an opportunity
+          to develop and deploy a complete full-stack application using modern
+          web technologies, relational database design, authentication, REST API
           development, and cloud hosting.
         </p>
       </section>
 
       <div className="flex flex-wrap gap-3">
-        <span className="flex items-center gap-2 border border-white/10 text-white/50 px-5 py-2.5 rounded-full text-sm">
-          <FaGithub />
-          <Link href={project.github} target="_blank" rel="noopener noreferrer">
-            View Source
-          </Link>
-        </span>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-foreground text-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-foreground hover:text-background transition-all"
+          >
+            <FaLocationArrow color="#CBACF9" />
+            Live Demo
+          </a>
+        )}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-foreground text-background px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-all"
+          >
+            <FaGithub />
+            View Code
+          </a>
+        )}
       </div>
     </main>
   );

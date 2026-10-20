@@ -1,8 +1,9 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { GrHeroku } from "react-icons/gr";
 
-import { FaDocker, FaGithub, FaHtml5 } from "react-icons/fa";
+import { FaDocker, FaGithub, FaHtml5, FaJava } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -14,6 +15,7 @@ import {
   SiExpo,
   SiReact,
   SiSupabase,
+  SiSpringboot,
 } from "react-icons/si";
 import { PinContainer } from "./ui/pin";
 import { Badge } from "./ui/badge";
@@ -41,22 +43,24 @@ const RecentProjects = () => {
       ],
     },
     {
-      name: "JobFlow",
-      shortName: "jobTracker",
+      name: "Kitchen Rotation",
+      shortName: "kitchen-rotation",
       description:
-        "A modern AI-assisted job application tracker SaaS that helps users organize, track, and analyze their job search using a Kanban workflow, analytics (WIP), and optional AI interview preparation.",
-      image: "/JobTracker-saas.png",
-      github: "https://github.com/weasy1as/JobTrackerSaas",
-      demo: undefined /*"https://job-tracker-saas-iota.vercel.app/",*/,
+        "A full-stack household cleaning scheduler that fairly distributes responsibilities through a configurable member rotation and automatic schedule generation.",
+      image: "/Household.png",
+      demo: "https://household-app-green-nu.vercel.app/",
+      github: "https://github.com/weasy1as/Household-App",
       techStack: [
         { icon: <SiNextdotjs className={iconClass} />, name: "Next.js" },
-        { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
-        { icon: <SiPostgresql className={iconClass} />, name: "Supabase" },
-        { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
-        { icon: <SiStripe className={iconClass} />, name: "Stripe" },
+        { icon: <FaJava className={iconClass} />, name: "Java" },
+        { icon: <SiSpringboot className={iconClass} />, name: "Spring Boot" },
+        { icon: <SiPostgresql className={iconClass} />, name: "PostgreSQL" },
+        { icon: <SiSupabase className={iconClass} />, name: "Supabase" },
+        { icon: <FaDocker className={iconClass} />, name: "Docker" },
+        { icon: <GrHeroku className={iconClass} />, name: "Heroku" },
       ],
     },
-    {
+    /*{
       name: "Automated Job Alerts Workflow",
       shortName: "job-alerts-workflow",
       description:
@@ -73,6 +77,7 @@ const RecentProjects = () => {
         { icon: <FaHtml5 className={iconClass} />, name: "HTML Parsing / RSS" },
       ],
     },
+    */
     {
       name: "GymFlow",
       shortName: "gymflow",
@@ -87,23 +92,6 @@ const RecentProjects = () => {
         { icon: <SiSupabase className={iconClass} />, name: "Supabase" },
       ],
     },
-
-    /* {
-      name: "AI Job Match",
-      description:
-        "A full-stack web app that uses AI to analyze and match resumes with job descriptions, highlighting skill gaps and providing tailored improvement suggestions.",
-      image: "/aijobmatch.png",
-      github: "https://github.com/weasy1as/aijobmatch",
-      techStack: [
-        { icon: <SiReact className={iconClass} />, name: "React" },
-        { icon: <SiTailwindcss className={iconClass} />, name: "Tailwind CSS" },
-        { icon: <SiSpringboot className={iconClass} />, name: "Spring Boot" },
-        { icon: <SiPostgresql className={iconClass} />, name: "PostgreSQL" },
-        { icon: <SiSupabase className={iconClass} />, name: "Supabase" },
-        { icon: <SiOpenai className={iconClass} />, name: "OpenAI API" },
-      ],
-    },
-    */
   ];
 
   return (
@@ -118,15 +106,24 @@ const RecentProjects = () => {
             className="m-4 lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.name}
           >
-            <PinContainer title={item.github} href={item.github}>
+            <PinContainer title={item.github ?? item.name} href={item.github}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
-                <Image
-                  width={500}
-                  height={500}
-                  src={item.image}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
+                {item.image ? (
+                  <Image
+                    width={500}
+                    height={500}
+                    src={item.image}
+                    alt="cover"
+                    className="z-10 absolute bottom-0"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-purple-950">
+                    <div className="absolute inset-6 rounded-xl border border-white/10 bg-white/[.04]" />
+                    <div className="absolute left-10 right-10 top-14 h-3 rounded-full bg-blue-400/40" />
+                    <div className="absolute left-10 top-24 h-3 w-2/5 rounded-full bg-white/20" />
+                    <div className="absolute left-10 right-20 top-32 h-3 rounded-full bg-white/10" />
+                  </div>
+                )}
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
